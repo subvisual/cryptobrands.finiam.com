@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang={{ metadata.lang }}>
+  <head>
+    <link rel="icon" href="/static/favicon.png" />
+    <script type="module" src="/_dist_/assets/scripts/index.js"></script>
+    <link href="/_dist_/assets/styles/index.css" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <title>{{title | default(metadata.title)}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ metadata.description }}" />
+    <meta name="keywords" content="{{ metadata.keywords }}" />
+  </head>
+
+  <body class="max-w-md mx-auto py-4 flex flex-col min-h-screen bg-gray-900">
+    {% include components/navbar.liquid %}
+
+    <main class="flex-grow pt-8 text-white">{{ content | safe }}</main>
+
+    {% include components/footer.liquid %}
+  </body>
+</html>
