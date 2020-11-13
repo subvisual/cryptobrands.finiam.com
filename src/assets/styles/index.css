@@ -5,3 +5,72 @@
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: Sans-Regular;
+  src: url('./fonts/StudioFeixenSans-Regular.eot');
+  src: url('./fonts/StudioFeixenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/StudioFeixenSans-Regular.woff2') format('woff2'),
+    url('./fonts/StudioFeixenSans-Regular.woff') format('woff'),
+    url('./fonts/StudioFeixenSans-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: Sans-Medium;
+  src: url('./fonts/StudioFeixenSans-Medium.eot');
+  src: url('./fonts/StudioFeixenSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/StudioFeixenSans-Medium.woff2') format('woff2'),
+    url('./fonts/StudioFeixenSans-Medium.woff') format('woff'),
+    url('./fonts/StudioFeixenSans-Medium.otf') format('truetype');
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -moz-font-feature-settings: "smcp=1, onum=1, frac=1, kern=1, liga=1, dlig=1, swsh=1";
+  -ms-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -o-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -webkit-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings: normal;
+
+  font-family: Sans-Regular, sans-serif;
+  font-size: 20px;
+  line-height: 1.3rem;
+  font-weight: 100;
+
+  background-color: theme('colors.purple.dark');
+}
+
+.link-underline {
+  display: inline-block;
+  border-bottom: 1px solid;
+  border-color: theme('colors.purple.dark');
+}
+
+.navbar-logo {
+  width: 20px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: all .2s ease-in-out;
+}
+
+.rings {
+  position: fixed;
+  width: 40vw;
+  height: auto;
+  bottom: -20%;
+  right: 0;
+  opacity: 0.15;
+}
