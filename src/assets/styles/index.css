@@ -62,7 +62,7 @@ html, body {
 
 .card:hover {
   transform: scale(1.01);
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .rings {
@@ -72,7 +72,6 @@ html, body {
   bottom: -20%;
   right: 0;
   opacity: 0.15;
-  z-index: 100;
 }
 
 .toggleHide {
