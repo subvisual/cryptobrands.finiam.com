@@ -1,5 +1,5 @@
 <div class="card bg-gray-lightest rounded-sm relative">
-    <a class="absolute w-full h-full" href="{{ project.link }}" target="_blank" rel="noopener"></a>
+    <a class="absolute w-full h-full" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}"></a>
     <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image">
     <div class="px-4 pt-2 pb-4">
       <div class="flex items-center">
@@ -8,17 +8,17 @@
         </h1>
         <img class="icon" src="/static/icons/external-link.svg" alt="External link icon" />
       </div>
-      <a class="text-tiny text-gray" href="{{ project.link }}" target="_blank" rel="noopener">
+      <a class="text-tiny text-gray" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}">
         {{ project.link_name }}
       </a>
     </div>
     <div class="px-4 py-3 border-t border-gray-lighter relative">
-      <a class="absolute w-full h-full z-20" href="{{ project.studio_link }}" target="_blank" rel="noopener"></a>
+      <a class="absolute w-full h-full z-20" href="{{ project.studio_link }}" target="_blank" rel="noopener" aria-label="{{project.studio_name}}"></a>
       <p class="text-tiny text-gray">
         Designed by
-        <a class="text-purple-dark link-underline" href="{{ project.studio_link }}" target="_blank" rel="noopener">
+        <span class="text-purple-dark link-underline">
           {{ project.studio_name }}
-        </a>
+        </span>
       </p>
     </div>
 </div>
