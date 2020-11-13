@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Utrust",
+    "link": "https://www.utrust.com",
+    "link_name": "www.utrust.com",
+    "studio_name": "Burocratik",
+    "studio_link": "https://burocratik.com/work/utrust/",
+    "image_path": "/static/project_images/utrust.jpg"
+  },
+  {
+    "title": "Request",
+    "link": "https://www.request.network",
+    "link_name": "www.request.network",
+    "studio_name": "Studio Dumbar",
+    "studio_link": "https://studiodumbar.com/work/request",
+    "image_path": "/static/project_images/request.jpg"
+  },
+  {
+    "title": "Stellar",
+    "link": "https://stellar.org/",
+    "link_name": "www.stellar.org",
+    "studio_name": "Kurppa Hosk",
+    "studio_link": "https://kurppahosk.com/snapshot/stellar/",
+    "image_path": "/static/project_images/stellar.jpg"
+  },
+  {
+    "title": "Mercuryo",
+    "link": "https://mercuryo.io/",
+    "link_name": "www.mercuryo.com",
+    "studio_name": "Shuka",
+    "studio_link": "https://shuka.design/mercuryo",
+    "image_path": "/static/project_images/mercuryo.jpg"
+  }
+]
