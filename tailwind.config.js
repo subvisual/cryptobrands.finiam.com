@@ -7,6 +7,7 @@ module.exports = {
     fontSize: {
       tiny: '0.8rem',
       base: '1rem',
+      md: '1.4rem',
     },
     maxWidth: {
       'xl': '1280px',
@@ -26,6 +27,12 @@ module.exports = {
     extend: {
       gap: {
       '5': '1.4rem',
+      },
+      textOpacity: {
+        '80': '0.80',
+      },
+      backgroundOpacity: {
+        '95': '0.95',
       }
     }
   }
