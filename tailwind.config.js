@@ -1,39 +1,44 @@
 module.exports = {
   purge: {
     mode: "all",
-    content: ["./src/**/*.js", "./src/**/*.njk", "./src/**/*.liquid", "./src/**/*.ts"],
+    content: [
+      "./src/**/*.js",
+      "./src/**/*.njk",
+      "./src/**/*.liquid",
+      "./src/**/*.ts",
+    ],
   },
   theme: {
     fontSize: {
-      tiny: '0.8rem',
-      base: '1rem',
-      md: '1.4rem',
+      tiny: "0.8rem",
+      base: "1rem",
+      md: "1.4rem",
     },
     maxWidth: {
-      'xl': '1280px',
+      xl: "1280px",
     },
     colors: {
       purple: {
-        dark:'#09001A',
+        dark: "#09001A",
       },
-      white: '#FFFFFF',
-      green: '#5EF38B',
+      white: "#FFFFFF",
+      green: "#5EF38B",
       gray: {
-        default: '#757575',
-        lighter: '#E1E1E1',
-        lightest: '#FCFCFC',
-      }
+        default: "#757575",
+        lighter: "#E1E1E1",
+        lightest: "#FCFCFC",
+      },
     },
     extend: {
       gap: {
-      '5': '1.4rem',
+        5: "1.4rem",
       },
       textOpacity: {
-        '80': '0.80',
+        80: "0.80",
       },
       backgroundOpacity: {
-        '95': '0.95',
-      }
-    }
-  }
+        95: "0.95",
+      },
+    },
+  },
 };
