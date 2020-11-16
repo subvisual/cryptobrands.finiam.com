@@ -1,0 +1,24 @@
+<div class="card transition duration-100 ease-in-out transform hover:scale-101 bg-gray-lightest rounded-sm relative">
+    <a class="absolute w-full h-full" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}"></a>
+    <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image" loading="lazy" />
+    <div class="px-4 pt-2 pb-4">
+      <div class="flex items-center">
+        <h1 class="text-base text-purple-dark mr-2 font-bold">
+          {{ project.title }}
+        </h1>
+        <img class="w-3 h-3" src="/static/icons/external-link.svg" alt="External link icon" loading="lazy" />
+      </div>
+      <a class="text-tiny text-gray" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}">
+        {{ project.link_name }}
+      </a>
+    </div>
+    <div class="px-4 py-3 border-t border-gray-lighter relative">
+      <a class="absolute w-full h-full z-20" href="{{ project.studio_link }}" target="_blank" rel="noopener" aria-label="{{project.studio_name}}"></a>
+      <p class="text-tiny text-gray">
+        Designed by
+        <span class="text-purple-dark border-b border-purple-dark inline-block">
+          {{ project.studio_name }}
+        </span>
+      </p>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.liquid
+---
+
+<div class="max-w-xl mx-auto relative">
+
+  <img class="custom-rings" src="/static/rings.svg" alt="Rings image" loading="lazy" />
+
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-5">
+    {% for project in projects reversed %}
+
+      {% include components/project_card.liquid,
+        project: project %}
+
+    {% endfor %}
+  </div>
+</div>
