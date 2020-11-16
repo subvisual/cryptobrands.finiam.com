@@ -9,9 +9,6 @@ module.exports = {
     ],
   },
   theme: {
-    screens: {
-      md: "800px",
-    },
     scale: {
       101: "1.01",
     },
