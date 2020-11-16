@@ -1,7 +1,9 @@
 <div class="card transition duration-100 ease-in-out transform hover:scale-101 bg-gray-lightest rounded-sm">
   <div class="hover:bg-purple-lighter relative">
     <a class="absolute w-full h-full" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}"></a>
-    <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image" loading="lazy" />
+    <div class="w-full min-h-250">
+      <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image" loading="lazy" />
+    </div>
     <div class="px-4 pt-2 pb-4">
       <div class="flex items-center">
         <h1 class="text-base text-purple-dark mr-2 font-bold">
