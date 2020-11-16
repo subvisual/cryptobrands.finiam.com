@@ -59,6 +59,7 @@ body {
   opacity: 0.15;
 }
 
-.toggleHide { /* It's being used on index.js to show/hide the about section*/
+.toggleHide {
+  /* It's being used on index.js to show/hide the about section*/
   display: none;
 }

@@ -10,7 +10,7 @@ module.exports = {
   },
   theme: {
     scale: {
-      '101': '1.01',
+      101: "1.01",
     },
     fontSize: {
       tiny: "0.8rem",
@@ -18,7 +18,7 @@ module.exports = {
       md: "1.4rem",
     },
     maxWidth: {
-      '950': "950px",
+      950: "950px",
       xl: "1280px",
     },
     colors: {
