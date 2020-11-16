@@ -1,19 +1,19 @@
 [
   {
-    "title": "Utrust",
-    "link": "https://www.utrust.com",
-    "link_name": "www.utrust.com",
-    "studio_name": "Burocratik",
-    "studio_link": "https://burocratik.com/work/utrust/",
-    "image_path": "/static/images/utrust.jpg"
+    "title": "0x",
+    "link": "https://0x.org/",
+    "link_name": "www.0x.org",
+    "studio_name": "Unknown",
+    "studio_link": "#",
+    "image_path": "/static/images/0x.jpg"
   },
   {
-    "title": "Request",
-    "link": "https://www.request.network",
-    "link_name": "www.request.network",
-    "studio_name": "Studio Dumbar",
-    "studio_link": "https://studiodumbar.com/work/request",
-    "image_path": "/static/images/request.jpg"
+    "title": "Matcha",
+    "link": "https://matcha.xyz/",
+    "link_name": "www.matcha.xyz",
+    "studio_name": "Unknown",
+    "studio_link": "#",
+    "image_path": "/static/images/matcha.jpg"
   },
   {
     "title": "Stellar",
@@ -30,5 +30,37 @@
     "studio_name": "Shuka",
     "studio_link": "https://shuka.design/mercuryo",
     "image_path": "/static/images/mercuryo.jpg"
+  },
+  {
+    "title": "IBM Blockchain",
+    "link": "https://www.ibm.com/blockchain",
+    "link_name": "www.ibm.com/blockchain",
+    "studio_name": "Athletics",
+    "studio_link": "https://athleticsnyc.com/work/ibm-blockchain",
+    "image_path": "/static/images/ibm.jpg"
+  },
+  {
+    "title": "Request",
+    "link": "https://www.request.network",
+    "link_name": "www.request.network",
+    "studio_name": "Studio Dumbar",
+    "studio_link": "https://studiodumbar.com/work/request",
+    "image_path": "/static/images/request.jpg"
+  },
+  {
+    "title": "Uphold",
+    "link": "https://www.uphold.com",
+    "link_name": "www.uphold.com",
+    "studio_name": "Uphold",
+    "studio_link": "https://www.uphold.com",
+    "image_path": "/static/images/uphold.jpg"
+  },
+  {
+    "title": "Utrust",
+    "link": "https://www.utrust.com",
+    "link_name": "www.utrust.com",
+    "studio_name": "Burocratik",
+    "studio_link": "https://burocratik.com/work/utrust/",
+    "image_path": "/static/images/utrust.jpg"
   }
 ]
