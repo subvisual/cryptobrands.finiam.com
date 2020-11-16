@@ -59,7 +59,11 @@ body {
   opacity: 0.15;
 }
 
-.toggleHide {
+.js-toggleHide {
   /* It's being used on index.js to show/hide the about section*/
   display: none;
+}
+
+.js-overflow {
+  overflow: hidden;
 }

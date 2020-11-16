@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   aboutButtons.forEach(function (el) {
     el.onclick = function () {
-      aboutContainer.classList.toggle("toggleHide");
+      aboutContainer.classList.toggle("js-toggleHide");
+      document.body.classList.toggle("js-overflow");
     };
   });
 });
