@@ -3,16 +3,16 @@
     "title": "0x",
     "link": "https://0x.org/",
     "link_name": "www.0x.org",
-    "studio_name": "Unknown",
-    "studio_link": "#",
+    "studio_name": null,
+    "studio_link": null,
     "image_path": "/static/images/0x.jpg"
   },
   {
     "title": "Matcha",
     "link": "https://matcha.xyz/",
     "link_name": "www.matcha.xyz",
-    "studio_name": "Unknown",
-    "studio_link": "#",
+    "studio_name": null,
+    "studio_link": null,
     "image_path": "/static/images/matcha.jpg"
   },
   {
