@@ -48,32 +48,9 @@ body {
   font-size: 20px;
   line-height: 1.3rem;
   font-weight: 100;
-
-  background-color: theme("colors.purple.dark");
 }
 
-.link-underline {
-  display: inline-block;
-  border-bottom: 1px solid;
-  border-color: theme("colors.purple.dark");
-}
-
-.navbar-logo {
-  width: 20px;
-  height: auto;
-}
-
-.icon {
-  width: 15px;
-  height: 15px;
-}
-
-.card:hover {
-  transform: scale(1.01);
-  transition: all 0.1s ease-in-out;
-}
-
-.rings {
+.custom-rings {
   position: fixed;
   width: 40vw;
   height: auto;
@@ -82,10 +59,6 @@ body {
   opacity: 0.15;
 }
 
-.toggleHide {
+.toggleHide { /* It's being used on index.js to show/hide the about section*/
   display: none;
-}
-
-.text-max-width {
-  max-width: 950px;
 }
