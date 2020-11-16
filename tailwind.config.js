@@ -9,6 +9,9 @@ module.exports = {
     ],
   },
   theme: {
+    screens: {
+      md: "800px",
+    },
     scale: {
       101: "1.01",
     },
@@ -18,6 +21,7 @@ module.exports = {
       md: "1.4rem",
     },
     minHeight: {
+      180: "180px",
       250: "250px",
     },
     maxWidth: {
