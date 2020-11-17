@@ -2,14 +2,15 @@
   <div class="hover:bg-purple-lighter relative">
     <a class="absolute w-full h-full" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}"></a>
     <div class="w-full sm:min-h-250 md:min-h-180 lg:min-h-250">
-      <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image" loading="lazy" />
+      <img class="w-full p-2" src="{{ project.image_path }}" alt="{{ project.title }} image" />
     </div>
     <div class="px-4 pt-2 pb-4">
       <div class="flex items-center">
         <h1 class="text-base text-purple-dark mr-2 font-bold">
           {{ project.title }}
         </h1>
-        <img class="w-3 h-3" src="/static/icons/external-link.svg" alt="External link icon" loading="lazy" />
+
+        {% include icons/external-link.svg %}
       </div>
       <a class="text-tiny text-gray" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}">
         {{ project.link_name }}
@@ -26,7 +27,7 @@
         <span class="text-purple-dark border-b border-purple-dark inline-block mr-2">
           {{ project.studio_name }}
         </span>
-        <img class="w-3 h-3" src="/static/icons/external-link.svg" alt="External link icon" loading="lazy" />
+        {% include icons/external-link.svg %}
       {% else %}
         <span class="mr-1">
           Designed by
