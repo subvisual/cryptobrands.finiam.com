@@ -6,6 +6,7 @@ module.exports = {
       "./src/**/*.njk",
       "./src/**/*.liquid",
       "./src/**/*.ts",
+      "./src/**/*.css",
     ],
   },
   theme: {
