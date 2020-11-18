@@ -2,6 +2,7 @@
 <html lang={{ metadata.lang }}>
   <head>
     <link rel="icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <script type="module" src="/_dist_/assets/scripts/index.js"></script>
     <link href="/_dist_/assets/styles/index.css" rel="stylesheet">
 
@@ -10,6 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ metadata.description }}" />
     <meta name="keywords" content="{{ metadata.keywords }}" />
+
+    <meta content="{{ metadata.title }}" property="og:title" />
+    <meta content="{{ metadata.description }}" property="og:description" />
+    <meta content="{{ metadata.image }}" property="og:image" />
+
+    <meta content="{{ metadata.title }}" property="twitter:title" />
+    <meta content="{{ metadata.description }}" property="twitter:description" />
+    <meta content="{{ metadata.image }}" property="twitter:image" />
+
+    <meta content="{{ metadata.title }}" property="twitter:title" />
+    <meta content="{{ metadata.description }}" property="twitter:description" />
+    <meta content="{{ metadata.image }}" property="twitter:image" />
+
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
   </head>
 
   <body class="mx-auto flex flex-col min-h-screen bg-purple-dark">

@@ -6,4 +6,5 @@ module.exports = {
   keywords:
     "crypto, cryptocurrency, branding, design, identity, blockchain, community, wearefiniam, repository, human, people",
   siteUrl: "https://cryptobrands.finiam.com",
+  image: "/images/siteImage.png",
 };
