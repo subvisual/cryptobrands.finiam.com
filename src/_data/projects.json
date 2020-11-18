@@ -1,5 +1,13 @@
 [
   {
+    "title": "Matcha",
+    "link": "https://matcha.xyz/",
+    "link_name": "www.matcha.xyz",
+    "studio_name": null,
+    "studio_link": null,
+    "image_path": "/images/matcha.jpg"
+  },
+  {
     "title": "0x",
     "link": "https://0x.org/",
     "link_name": "www.0x.org",
@@ -8,12 +16,12 @@
     "image_path": "/images/0x.jpg"
   },
   {
-    "title": "Matcha",
-    "link": "https://matcha.xyz/",
-    "link_name": "www.matcha.xyz",
-    "studio_name": null,
-    "studio_link": null,
-    "image_path": "/images/matcha.jpg"
+    "title": "Mercuryo",
+    "link": "https://mercuryo.io/",
+    "link_name": "www.mercuryo.com",
+    "studio_name": "Shuka",
+    "studio_link": "https://shuka.design/mercuryo",
+    "image_path": "/images/mercuryo.jpg"
   },
   {
     "title": "Stellar",
@@ -24,12 +32,12 @@
     "image_path": "/images/stellar.jpg"
   },
   {
-    "title": "Mercuryo",
-    "link": "https://mercuryo.io/",
-    "link_name": "www.mercuryo.com",
-    "studio_name": "Shuka",
-    "studio_link": "https://shuka.design/mercuryo",
-    "image_path": "/images/mercuryo.jpg"
+    "title": "Uphold",
+    "link": "https://www.uphold.com",
+    "link_name": "www.uphold.com",
+    "studio_name": "Uphold",
+    "studio_link": "https://www.uphold.com",
+    "image_path": "/images/uphold.jpg"
   },
   {
     "title": "IBM Blockchain",
@@ -46,14 +54,6 @@
     "studio_name": "Studio Dumbar",
     "studio_link": "https://studiodumbar.com/work/request",
     "image_path": "/images/request.jpg"
-  },
-  {
-    "title": "Uphold",
-    "link": "https://www.uphold.com",
-    "link_name": "www.uphold.com",
-    "studio_name": "Uphold",
-    "studio_link": "https://www.uphold.com",
-    "image_path": "/images/uphold.jpg"
   },
   {
     "title": "Utrust",
