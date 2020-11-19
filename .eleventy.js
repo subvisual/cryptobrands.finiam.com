@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
   ]);
 
   eleventyConfig.addPlugin(lazyImagesPlugin, {
+    imgSelector: "[data-lazy=\"true\"]",
     transformImgPath: (src) => `./src/static/${src}`,
   });
 
