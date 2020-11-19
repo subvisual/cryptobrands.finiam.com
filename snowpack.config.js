@@ -25,6 +25,6 @@ module.exports = {
   ],
   devOptions: {
     open: "none",
-    hmrDelay: 300
+    hmrDelay: 300,
   },
 };
