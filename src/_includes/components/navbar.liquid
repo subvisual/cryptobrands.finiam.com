@@ -10,9 +10,11 @@
         </a>
       </div>
 
-      <a href="/about" class="has-js text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer" data-js="aboutButton">
-        About
-      </a>
+      {% if page.url != "/about/" %}
+        <a href="/about" class="has-js text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer" data-js="aboutButton">
+          About
+        </a>
+      {% endif %}
 
       <a href="mailto:cryptobrands@finiam.com?subject=New%20suggestion" class="text-green text-tiny hover:text-opacity-75">
         Send your suggestion
