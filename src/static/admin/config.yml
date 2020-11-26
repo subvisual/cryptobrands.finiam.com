@@ -12,6 +12,8 @@ collections:
     extension: "json"
     create: true
     slug: "{{sort}}_{{title}}"
+    summary: "{{sort}}_{{title}}"
+    sortable_fields: ["sort"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
