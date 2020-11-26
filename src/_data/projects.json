@@ -8,6 +8,22 @@
     "image_path": "/images/matcha.jpg"
   },
   {
+    "title": "Novi",
+    "link": "https://www.novi.com/",
+    "link_name": "www.novi.com",
+    "studio_name": "Facebook",
+    "studio_link": "https://about.fb.com/news/2020/05/welcome-to-novi/",
+    "image_path": "/images/novi.jpg"
+  },
+  {
+    "title": "Coingate",
+    "link": "https://www.coingate.com/",
+    "link_name": "www.coingate.com",
+    "studio_name": null,
+    "studio_link": null,
+    "image_path": "/images/coingate.jpg"
+  },
+  {
     "title": "0x",
     "link": "https://0x.org/",
     "link_name": "www.0x.org",
