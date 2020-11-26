@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: finiam/cryptobrands.finiam.com
+  squash_merges: true
+publish_mode: editorial_workflow
+media_folder: "src/static/images"
+public_folder: "/images"
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/_data/projects"
+    extension: "json"
+    create: true
+    slug: "{{sort}}_{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Link Name", name: "link_name", widget: "string" }
+      - { label: "Studio Name", name: "studio_name", widget: "string" }
+      - { label: "Studio Link", name: "studio_link", widget: "string" }
+      - { label: "Image", name: "image_path", widget: "image" }
+      - { label: "Number", name: "sort", widget: "number" }

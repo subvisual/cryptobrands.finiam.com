@@ -8,9 +8,7 @@
     "format": "prettier --write \"src/**/*.js\" *.js \"src/**/*.css\"",
     "lint": "prettier --check \"src/**/*.js\" *.js \"src/**/*.css\""
   },
-  "dependencies": {
-    "tailwindcss": "^2.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@snowpack/plugin-optimize": "^0.2.9",
@@ -23,6 +21,8 @@
     "postcss": "^8.1.7",
     "postcss-cli": "^8.3.0",
     "prettier": "^2.0.5",
-    "snowpack": "^2.17.1"
+    "snowpack": "^2.17.1",
+    "glob": "^7.1.6",
+    "tailwindcss": "^2.0.1"
   }
 }
