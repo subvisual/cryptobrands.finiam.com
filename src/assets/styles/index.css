@@ -60,7 +60,7 @@ body {
   font-weight: 100;
 }
 
-.custom-text-font {
+.custom-text-sans {
   font-family: Sans-Regular-text;
   font-feature-settings: "ss01" 1;
 }
