@@ -26,11 +26,23 @@
     url("./fonts/StudioFeixenSans-Medium.otf") format("truetype");
 }
 
+@font-face {
+  font-family: Sans-Regular-text;
+  src: url("./fonts/StudioFeixenSans-Regular-text.eot");
+  src: url("./fonts/StudioFeixenSans-Regular-text.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/StudioFeixenSans-Regular-text.woff2") format("woff2"),
+    url("./fonts/StudioFeixenSans-Regular-text.woff") format("woff"),
+    url("./fonts/StudioFeixenSans-Regular-text.otf") format("truetype");
+  font-feature-settings: "ss01" 1;
+}
+
 html,
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+
   -moz-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1,
     "dlig" 1, "swsh" 1;
   -moz-font-feature-settings: "smcp=1, onum=1, frac=1, kern=1, liga=1, dlig=1, swsh=1";

@@ -10,6 +10,9 @@ module.exports = {
     ],
   },
   theme: {
+    fontFamily: {
+      "sans-text": ["Sans-Regular-text"],
+    },
     scale: {
       101: "1.01",
     },
@@ -34,7 +37,7 @@ module.exports = {
       white: "#FFFFFF",
       green: "#5EF38B",
       gray: {
-        default: "#757575",
+        light: "#757575",
         lighter: "#E1E1E1",
         lightest: "#FCFCFC",
       },
