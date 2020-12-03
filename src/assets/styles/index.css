@@ -26,6 +26,16 @@
     url("./fonts/StudioFeixenSans-Medium.otf") format("truetype");
 }
 
+@font-face {
+  font-family: Sans-Regular-text;
+  src: url("./fonts/StudioFeixenSans-Regular-text.eot");
+  src: url("./fonts/StudioFeixenSans-Regular-text.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/StudioFeixenSans-Regular-text.woff2") format("woff2"),
+    url("./fonts/StudioFeixenSans-Regular-text.woff") format("woff"),
+    url("./fonts/StudioFeixenSans-Regular-text.otf") format("truetype");
+}
+
 html,
 body {
   text-rendering: optimizeLegibility;
@@ -48,6 +58,11 @@ body {
   font-size: 20px;
   line-height: 1.3rem;
   font-weight: 100;
+}
+
+.custom-text-font {
+  font-family: Sans-Regular-text;
+  font-feature-settings: "ss01" 1;
 }
 
 .custom-rings {
