@@ -11,7 +11,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      "sans-text": ["Sans-Regular-text"],
+      sans: ["StudioFeixenSans"],
     },
     scale: {
       101: "1.01",
