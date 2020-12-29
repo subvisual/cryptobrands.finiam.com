@@ -7,34 +7,34 @@
 }
 
 @font-face {
-  font-family: Sans-Regular;
+  font-family: StudioFeixenSans-Edgy;
+  src: url("./fonts/Edgy-StudioFeixenSansRg.eot");
+  src: url("./fonts/Edgy-StudioFeixenSansRg.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Edgy-StudioFeixenSansRg.woff2") format("woff2"),
+    url("./fonts/Edgy-StudioFeixenSansRg.woff") format("woff"),
+    url("./fonts/Edgy-StudioFeixenSansRg.otf") format("truetype");
+}
+
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+  src: url("./fonts/Edgy-StudioFeixenSansMd.eot");
+  src: url("./fonts/Edgy-StudioFeixenSansMd.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Edgy-StudioFeixenSansMd.woff2") format("woff2"),
+    url("./fonts/Edgy-StudioFeixenSansMd.woff") format("woff"),
+    url("./fonts/Edgy-StudioFeixenSansMd.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: StudioFeixenSans;
   src: url("./fonts/StudioFeixenSans-Regular.eot");
   src: url("./fonts/StudioFeixenSans-Regular.eot?#iefix")
       format("embedded-opentype"),
     url("./fonts/StudioFeixenSans-Regular.woff2") format("woff2"),
     url("./fonts/StudioFeixenSans-Regular.woff") format("woff"),
     url("./fonts/StudioFeixenSans-Regular.otf") format("truetype");
-}
-
-@font-face {
-  font-family: Sans-Medium;
-  src: url("./fonts/StudioFeixenSans-Medium.eot");
-  src: url("./fonts/StudioFeixenSans-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("./fonts/StudioFeixenSans-Medium.woff2") format("woff2"),
-    url("./fonts/StudioFeixenSans-Medium.woff") format("woff"),
-    url("./fonts/StudioFeixenSans-Medium.otf") format("truetype");
-}
-
-@font-face {
-  font-family: Sans-Regular-text;
-  src: url("./fonts/StudioFeixenSans-Regular-text.eot");
-  src: url("./fonts/StudioFeixenSans-Regular-text.eot?#iefix")
-      format("embedded-opentype"),
-    url("./fonts/StudioFeixenSans-Regular-text.woff2") format("woff2"),
-    url("./fonts/StudioFeixenSans-Regular-text.woff") format("woff"),
-    url("./fonts/StudioFeixenSans-Regular-text.otf") format("truetype");
-  font-feature-settings: "ss01" 1;
 }
 
 html,
@@ -56,7 +56,7 @@ body {
     "dlig" 1, "swsh" 1;
   font-feature-settings: normal;
 
-  font-family: Sans-Regular, sans-serif;
+  font-family: StudioFeixenSans-Edgy, sans-serif;
   font-size: 20px;
   line-height: 1.3rem;
   font-weight: 100;

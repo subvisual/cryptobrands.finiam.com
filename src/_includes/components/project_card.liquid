@@ -15,13 +15,13 @@
 
         {% include icons/external-link.svg %}
       </div>
-      <a class="text-tiny text-gray-light font-sans-text" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}">
+      <a class="text-tiny text-gray-light font-sans" href="{{ project.link }}" target="_blank" rel="noopener" aria-label="{{project.title}}">
         {{ project.link_name }}
       </a>
     </div>
   </div>
   <div class="border-t border-gray-lighter {% if project.studio_name %} hover:bg-purple-lighter {% endif %} relative">
-    <p class="px-4 py-3 text-tiny text-gray-light flex items-center font-sans-text">
+    <p class="px-4 py-3 text-tiny text-gray-light flex items-center font-sans">
       {% if project.studio_name %}
         <a class="absolute w-full h-full z-20" href="{{ project.studio_link }}" target="_blank" rel="noopener" aria-label="{{project.studio_name}}"></a>
         <span class="mr-1">
