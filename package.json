@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development snowpack dev",
     "build": "NODE_ENV=production snowpack build",
     "postbuild": "yarn optimize-fonts",
-    "optimize-fonts": "subfont build --in-place --harfbuzz --no-fallbacks --font-display block --recursive",
+    "optimize-fonts": "subfont build --in-place --harfbuzz --no-fallbacks --font-display block --recursive --inline-fonts",
     "format": "prettier --write \"src/**/*.js\" *.js \"src/**/*.css\"",
     "lint": "prettier --check \"src/**/*.js\" *.js \"src/**/*.css\""
   },
@@ -15,21 +15,19 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@snowpack/plugin-optimize": "^0.2.9",
-    "@snowpack/plugin-postcss": "^1.0.7",
-    "@snowpack/plugin-run-script": "^2.2.0",
-    "@snowpack/plugin-webpack": "^2.1.1",
-    "autoprefixer": "^10.0.2",
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "@snowpack/plugin-run-script": "^2.3.0",
+    "autoprefixer": "^10.2.1",
     "cssnano": "^4.1.10",
     "glob": "^7.1.6",
     "hasha": "^5.2.2",
     "netlify-plugin-cache": "^1.0.3",
-    "postcss": "^8.1.7",
-    "postcss-cli": "^8.3.0",
-    "prettier": "^2.0.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
     "sharp": "^0.27.0",
-    "snowpack": "^2.17.1",
+    "snowpack": "^3.0.11",
     "subfont": "^5.2.5",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.2"
   }
 }
