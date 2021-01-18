@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.documentElement.classList.remove("no-js");
-  document.documentElement.classList.add("has-js");
-
   const aboutButtons = document.querySelectorAll('[data-js="aboutButton"]');
   const aboutContainer = document.querySelector('[data-js="about"]');
 

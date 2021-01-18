@@ -4,6 +4,7 @@
     <link rel="icon" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/favicon.png" />
     <script type="module" src="/_dist_/assets/scripts/index.js"></script>
+    <script type="module" defer src="/_dist_/assets/scripts/lazyload.js"></script>
     <link href="/_dist_/assets/styles/index.css" rel="stylesheet">
 
     <meta charset="utf-8" />
@@ -26,6 +27,11 @@
 
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
+
+    <script>
+        document.documentElement.classList.remove("no-js");
+        document.documentElement.classList.add("has-js");
+    </script>
   </head>
 
   <body class="mx-auto flex flex-col min-h-screen bg-purple-dark">

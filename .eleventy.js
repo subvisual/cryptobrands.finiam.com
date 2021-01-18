@@ -1,4 +1,4 @@
-const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
+const image = require("./utils/image");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats([
@@ -15,12 +15,13 @@ module.exports = function (eleventyConfig) {
     "woff2",
   ]);
 
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: "[data-lazy=\"true\"]",
-    transformImgPath: (src) => `./src/static/${src}`,
-  });
+  eleventyConfig.addShortcode("image", async (src, alt, klass = "") =>
+    image(src, alt, klass, false),
+  );
 
-  eleventyConfig.addPassthroughCopy({ "src/static": "." });
+  eleventyConfig.addShortcode("responsiveImage", async (src, alt, klass = "") =>
+    image(src, alt, klass, true),
+  );
 
   return {
     dir: {

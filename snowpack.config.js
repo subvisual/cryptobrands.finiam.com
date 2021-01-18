@@ -1,6 +1,7 @@
 module.exports = {
   mount: {
     _output: "/",
+    static: "/",
     src: "/_dist_",
   },
   plugins: [
