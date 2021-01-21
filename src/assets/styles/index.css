@@ -2,39 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+
+  src: url("/fonts/Edgy-StudioFeixenSansRg.otf");
 }
 
 @font-face {
   font-family: StudioFeixenSans-Edgy;
-  src: url("./fonts/Edgy-StudioFeixenSansRg.eot");
-  src: url("./fonts/Edgy-StudioFeixenSansRg.eot?#iefix")
-      format("embedded-opentype"),
-    url("./fonts/Edgy-StudioFeixenSansRg.woff2") format("woff2"),
-    url("./fonts/Edgy-StudioFeixenSansRg.woff") format("woff"),
-    url("./fonts/Edgy-StudioFeixenSansRg.otf") format("truetype");
-}
-
-@font-face {
-  font-family: StudioFeixenSans-Edgy;
-  src: url("./fonts/Edgy-StudioFeixenSansMd.eot");
-  src: url("./fonts/Edgy-StudioFeixenSansMd.eot?#iefix")
-      format("embedded-opentype"),
-    url("./fonts/Edgy-StudioFeixenSansMd.woff2") format("woff2"),
-    url("./fonts/Edgy-StudioFeixenSansMd.woff") format("woff"),
-    url("./fonts/Edgy-StudioFeixenSansMd.otf") format("truetype");
+  src: url("/fonts/Edgy-StudioFeixenSansMd.otf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: StudioFeixenSans;
-  src: url("./fonts/StudioFeixenSans-Regular.eot");
-  src: url("./fonts/StudioFeixenSans-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("./fonts/StudioFeixenSans-Regular.woff2") format("woff2"),
-    url("./fonts/StudioFeixenSans-Regular.woff") format("woff"),
-    url("./fonts/StudioFeixenSans-Regular.otf") format("truetype");
+  src: url("/fonts/StudioFeixenSans-Regular.otf");
 }
 
 html,
@@ -62,6 +44,10 @@ body {
   font-weight: 100;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .custom-rings {
   position: fixed;
   width: 40vw;
@@ -69,8 +55,4 @@ body {
   bottom: -20%;
   right: 0;
   opacity: 0.15;
-}
-
-.no-js img[data-lazy="true"] {
-  display: none !important;
 }

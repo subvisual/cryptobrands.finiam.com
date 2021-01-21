@@ -1,30 +1,31 @@
 module.exports = {
   mount: {
     _output: "/",
-    src: "/_dist_",
+    static: "/",
+    "src/assets": "/assets",
   },
+
   plugins: [
     "@snowpack/plugin-postcss",
-    ["@snowpack/plugin-run-script", { cmd: "eleventy", watch: "$1 --watch" }],
-    [
-      "@snowpack/plugin-webpack",
-      {
-        extendConfig: (config) => ({
-          ...config,
-          optimization: {
-            ...config.optimization,
 
-            runtimeChunk: false,
-            splitChunks: {
-              chunks: "async",
-            },
-          },
-        }),
-      },
+    [
+      "@snowpack/plugin-run-script",
+      { cmd: "eleventy", watch: "$1 --watch --silent" },
     ],
   ],
+
   devOptions: {
     open: "none",
     hmrDelay: 500,
+  },
+
+  packageOptions: {
+    external: ["fonts"],
+  },
+
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: "es2017",
   },
 };
