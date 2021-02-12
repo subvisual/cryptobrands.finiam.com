@@ -21,15 +21,14 @@ export default function ProjectCard({
           aria-label={title}
         ></a>
         <div className="p-2 pb-0">
-          <div className="relative w-full h-64 sm:h-64 md:h-48 lg:h-48">
-            <Image
-              src={image_path}
-              alt="Project's showcase"
-              layout="fill"
-              loading="lazy"
-              objectFit="cover"
-            />
-          </div>
+          <Image
+            className="w-full sm:min-h-250 md:min-h-180 lg:min-h-250"
+            src={image_path}
+            alt="Project's showcase"
+            layout="fill"
+            loading="lazy"
+            objectFit="cover"
+          />
         </div>
         <div className="px-4 pt-2 pb-4">
           <div className="flex items-center">
@@ -55,7 +54,7 @@ export default function ProjectCard({
           studio_name ? "hover:bg-purple-lighter" : ""
         }`}
       >
-        <p className="px-4 py-3 text-tiny text-gray-light flex items-center font-sans">
+        <div className="px-4 py-3 text-tiny text-gray-light flex flex-wrap items-center font-sans">
           {studio_name ? (
             <>
               <a
@@ -74,7 +73,7 @@ export default function ProjectCard({
           ) : (
             <>
               <span className="mr-1">Designed by</span>
-              <span className="text-purple-dark inline-block flex-grow">
+              <span className="text-purple-dark inline-block flex-grow mr-1">
                 Unknown :(
               </span>
               <a
@@ -85,7 +84,7 @@ export default function ProjectCard({
               </a>
             </>
           )}
-        </p>
+        </div>
       </div>
     </div>
   );
