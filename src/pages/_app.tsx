@@ -40,10 +40,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
 
         <meta content="summary_large_image" name="twitter:card" />
-        <link
-          href="/fonts/index.css"
-          rel="stylesheet"
-        />
+        <link href="/fonts/index.css" rel="stylesheet" />
       </Head>
 
       <div className="min-h-screen bg-purple-dark">

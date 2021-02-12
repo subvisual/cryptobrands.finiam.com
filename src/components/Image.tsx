@@ -12,7 +12,6 @@ const webpLoader = (require as any).context(
   /\.(png|jpeg|jpg)$/,
 );
 
-
 export default function Image({ src, ...props }) {
   const imgRef = useRef({} as any);
   const [imgLoaded, setImgLoaded] = useState(false);
