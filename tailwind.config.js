@@ -3,9 +3,9 @@ module.exports = {
     mode: "all",
     content: [
       "./src/**/*.js",
-      "./src/**/*.njk",
-      "./src/**/*.liquid",
+      "./src/**/*.jsx",
       "./src/**/*.ts",
+      "./src/**/*.tsx",
       "./src/**/*.css",
     ],
   },

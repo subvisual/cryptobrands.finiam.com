@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+  src: url("/fonts/subset-StudioFeixenSansRg_Finiam.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSansRg_Finiam.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+  src: url("/fonts/subset-StudioFeixenSansMd_Finiam.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSansMd_Finiam.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: StudioFeixenSans;
+  src: url("/fonts/subset-StudioFeixenSans-Regular.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSans-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+  -moz-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1,
+    "dlig" 1, "swsh" 1;
+  -moz-font-feature-settings: "smcp=1, onum=1, frac=1, kern=1, liga=1, dlig=1, swsh=1";
+  -ms-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1,
+    "dlig" 1, "swsh" 1;
+  -o-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1,
+    "dlig" 1, "swsh" 1;
+  -webkit-font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1,
+    "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings: "smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1,
+    "dlig" 1, "swsh" 1;
+  font-feature-settings: normal;
+
+  font-family: StudioFeixenSans-Edgy, sans-serif;
+  font-size: 20px;
+  line-height: 1.3rem;
+  font-weight: 100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-rings {
+  position: fixed;
+  width: 40vw;
+  height: auto;
+  bottom: -20%;
+  right: 0;
+  opacity: 0.15;
+}
+
+.fix-next-image > div {
+  position: static !important;
+}
+
+.fix-next-image img {
+  object-fit: contain;
+  width: 100% !important;
+  position: static !important;
+  height: unset !important;
+}

@@ -25,15 +25,7 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-node-
 
-      - name: yarn install, lint and build
+      - name: yarn install, lint
         run: |
           yarn
           yarn lint
-          yarn build
-
-      - name: Google Lighthouse
-        run: |
-          npm install -g @lhci/cli@0.4.x
-          lhci autorun --upload.target=temporary-public-storage
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

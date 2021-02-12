@@ -5,3 +5,5 @@ node_modules/
 _output/
 .DS_Store
 .lazyimages.json
+.next
+out
