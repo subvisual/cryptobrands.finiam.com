@@ -37,9 +37,7 @@ export default function Image({ src, ...props }) {
         <img
           {...props}
           ref={imgRef}
-          className={`bg-gray-lightest opacity-0 transition-opacity absolute w-full h-full z-10 ${
-            imgLoaded ? "opacity-100" : ""
-          }`}
+          className={`bg-gray-lightest w-full h-full absolute z-10`}
           onLoad={handleOnLoad}
           src={imageLoader(`.${src}`)}
         />
