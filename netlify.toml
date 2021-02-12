@@ -2,11 +2,6 @@
   command = "yarn build"
   publish = "out"
 
-[[headers]]
-  for = "/_next/image"
-  [headers.values]
-    Cache-Control = "max-age=31536000"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
