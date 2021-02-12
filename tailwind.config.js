@@ -1,15 +1,22 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: {
     mode: "all",
     content: [
       "./src/**/*.js",
-      "./src/**/*.njk",
-      "./src/**/*.liquid",
+      "./src/**/*.jsx",
       "./src/**/*.ts",
+      "./src/**/*.tsx",
       "./src/**/*.css",
     ],
   },
   theme: {
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
+
     fontFamily: {
       sans: ["StudioFeixenSans"],
     },

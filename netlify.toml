@@ -1,18 +1,11 @@
 [build]
   command = "yarn build"
-  publish = "build"
+  publish = "out"
 
-[[headers]]
-  for = "/subfont/*"
-  [headers.values]
-    Cache-Control = "max-age=31536000"
-
-[[headers]]
-  for = "/optimized_images/*"
-  [headers.values]
-    Cache-Control = "max-age=31536000"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[plugins]]
   package = "netlify-plugin-cache"
   [plugins.inputs]
-    paths = ["_output"]
+    paths = [".next"]
