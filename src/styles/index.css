@@ -39,14 +39,3 @@ body {
   right: 0;
   opacity: 0.15;
 }
-
-.fix-next-image > div {
-  position: static !important;
-}
-
-.fix-next-image img {
-  object-fit: contain;
-  width: 100% !important;
-  position: static !important;
-  height: unset !important;
-}
