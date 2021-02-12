@@ -36,7 +36,12 @@ export default function Image({ className, src, objectFit, ...props }) {
       <picture>
         <source srcSet={webpLoader(`.${src}`)} type="image/webp" />
         <source srcSet={imageLoader(`.${src}`)} type="image/jpeg" />
-        <img {...props} ref={imgRef} onLoad={handleOnLoad} src={imageLoader(`.${src}`)} />
+        <img
+          {...props}
+          ref={imgRef}
+          onLoad={handleOnLoad}
+          src={imageLoader(`.${src}`)}
+        />
       </picture>
     </div>
   );
