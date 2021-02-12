@@ -12,6 +12,7 @@ const webpLoader = (require as any).context(
   /\.(png|jpeg|jpg)$/,
 );
 
+
 export default function Image({ src, ...props }) {
   const imgRef = useRef({} as any);
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -26,18 +27,21 @@ export default function Image({ src, ...props }) {
 
   return (
     <div className="relative h-full">
-      <div
-        className="absolute w-full h-full z-0 bg-gray-lighter"
-        aria-hidden="true"
-      />
+      {!imgLoaded && (
+        <div
+          className="absolute w-full h-full z-0 bg-gray-lighter"
+          aria-hidden="true"
+        />
+      )}
 
       <picture>
         <source srcSet={webpLoader(`.${src}`)} type="image/webp" />
         <source srcSet={imageLoader(`.${src}`)} type="image/jpeg" />
         <img
           {...props}
-          ref={imgRef}
-          className={`bg-gray-lightest w-full h-full absolute z-10`}
+          className={`bg-gray-lightest opacity-0 transition-opacity ${
+            imgLoaded ? "opacity-100" : ""
+          }`}
           onLoad={handleOnLoad}
           src={imageLoader(`.${src}`)}
         />
