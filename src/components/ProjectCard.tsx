@@ -11,7 +11,7 @@ export default function ProjectCard({
   studio_link,
 }) {
   return (
-    <div className="bg-gray-lightest transition duration-100 ease-in-out transform hover:scale-101 rounded-sm overflow-hidden">
+    <div className="bg-gray-lightest transition-transform duration-100 ease-in-out transform hover:scale-101 rounded-sm overflow-hidden">
       <div className="hover:bg-purple-lighter relative">
         <a
           className="absolute w-full h-full"
