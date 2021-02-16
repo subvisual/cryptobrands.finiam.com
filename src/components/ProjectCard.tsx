@@ -22,7 +22,7 @@ export default function ProjectCard({
         ></a>
         <div className="p-2 pb-0">
           <Image
-            className="w-full sm:min-h-250 md:min-h-180 lg:min-h-250"
+            className="w-full min-h-150 sm:min-h-250 md:min-h-180 lg:min-h-250"
             src={image_path}
             alt="Project's showcase"
             layout="fill"
