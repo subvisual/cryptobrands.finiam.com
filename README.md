@@ -1,10 +1,6 @@
 # Finiam Cryptobrands Website
 
-A basic Eleventy app powered by Snowpack.
-
-Just place `liquid` (templating language used by Shopify) or `md` files under `src` and they will get turn into HTML pages by Eleventy.
-
-Write Javascript and CSS under `src/assets`. Avoid CSS though and use Tailwind, compiles will be slow everytime you update the CSS.
+A basic Next.js app styled with Tailwind.
 
 ## Available Scripts
 
