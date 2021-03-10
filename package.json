@@ -9,6 +9,7 @@
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css}\""
   },
   "dependencies": {
+    "@reach/dialog": "^0.13.2",
     "glob": "^7.1.6",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
