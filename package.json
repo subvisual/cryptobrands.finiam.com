@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "critters": "^0.0.8",
+    "@reach/dialog": "^0.13.2",
     "glob": "^7.1.6",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",

@@ -40,14 +40,13 @@ export default function Navbar() {
             </div>
 
             {router.pathname !== "/about" && (
-              <button onClick={openModal} type="button">
-                <a
-                  href="/about"
-                  className="text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer"
-                >
-                  About
-                </a>
-              </button>
+              <a
+                href="/about"
+                className="text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer"
+                onClick={openModal}
+              >
+                About
+              </a>
             )}
 
             <a
@@ -60,7 +59,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {aboutOpen && <AboutModal onClose={closeModal} />}
+      {aboutOpen && <AboutModal onDismiss={closeModal} />}
     </>
   );
 }

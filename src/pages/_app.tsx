@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import "@reach/dialog/styles.css";
 import "../styles/index.css";
 
 const METADATA = {
