@@ -27,6 +27,32 @@ body {
   font-weight: 100;
 }
 
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+  src: url("/fonts/subset-StudioFeixenSansRg_Finiam.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSansRg_Finiam.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: StudioFeixenSans-Edgy;
+  src: url("/fonts/subset-StudioFeixenSansMd_Finiam.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSansMd_Finiam.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: StudioFeixenSans;
+  src: url("/fonts/subset-StudioFeixenSans-Regular.woff2") format("woff2"),
+    url("/fonts/subset-StudioFeixenSans-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
