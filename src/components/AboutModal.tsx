@@ -3,11 +3,12 @@ import Head from "next/head";
 import Dialog from "@reach/dialog";
 import AboutInner from "./AboutInner";
 
-export default function AboutModal({ onDismiss }) {
+export default function AboutModal({ isOpen, onDismiss }) {
   return (
     <Dialog
       onDismiss={onDismiss}
-      className="fixed w-full h-full p-0 m-0 z-50 bg-purple-dark bg-opacity-95"
+      isOpen={isOpen}
+      className="fixed top-0 left-0 w-full h-full p-0 m-0 z-50 bg-purple-dark bg-opacity-95"
       aria-label="About page content"
     >
       <Head>
