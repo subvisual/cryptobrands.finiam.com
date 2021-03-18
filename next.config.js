@@ -1,21 +1,24 @@
 const withOptimizedImages = require("next-optimized-images");
+const withPreact = require("next-plugin-preact");
 
-module.exports = withOptimizedImages({
-  target: "experimental-serverless-trace",
+module.exports = withPreact(
+  withOptimizedImages({
+    target: "experimental-serverless-trace",
 
-  experimental: { optimizeCss: true },
+    experimental: { optimizeCss: true },
 
-  async headers() {
-    return [
-      {
-        source: "/",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "max-age=1800",
-          },
-        ],
-      },
-    ];
-  },
-});
+    async headers() {
+      return [
+        {
+          source: "/",
+          headers: [
+            {
+              key: "Cache-Control",
+              value: "max-age=1800",
+            },
+          ],
+        },
+      ];
+    },
+  }),
+);

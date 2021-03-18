@@ -10,12 +10,12 @@ export default function Navbar() {
 
   function openModal(event) {
     event.preventDefault();
-    document.body.classList.toggle("overflow-hidden", true);
+    event.stopPropagation();
+
     setAboutOpen(true);
   }
 
   function closeModal() {
-    document.body.classList.toggle("overflow-hidden", false);
     setAboutOpen(false);
   }
 
@@ -40,13 +40,14 @@ export default function Navbar() {
             </div>
 
             {router.pathname !== "/about" && (
-              <a
-                href="/about"
-                className="text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer"
-                onClick={openModal}
-              >
-                About
-              </a>
+              <div onClick={openModal}>
+                <a
+                  href="/about"
+                  className="text-white text-opacity-50 text-tiny hover:text-opacity-100 mr-5 cursor-pointer"
+                >
+                  About
+                </a>
+              </div>
             )}
 
             <a
@@ -59,7 +60,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {aboutOpen && <AboutModal onDismiss={closeModal} />}
+      <AboutModal isOpen={aboutOpen} onDismiss={closeModal} />
     </>
   );
 }
