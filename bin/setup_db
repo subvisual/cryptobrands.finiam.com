@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+require("dotenv").config();
+const glob = require("glob");
+const fs = require("fs");
+const { PrismaClient } = require("@prisma/client");
+
+const prisma = new PrismaClient();
+
+(async () => {
+  try {
+    console.log("Adding projects to the database");
+
+    const projects = glob
+      .sync(process.cwd() + "/backend/projects/**.json")
+      .map((filename) => JSON.parse(fs.readFileSync(filename)));
+
+    const calls = projects.map((project) =>
+      prisma.project.upsert({
+        create: { name: project.name },
+        update: {},
+        where: { name: project.name },
+      }),
+    );
+
+    await prisma.$transaction(calls);
+
+    console.log("Done!");
+
+    process.exit(0);
+  } catch (error) {
+    console.error(error);
+    process.exit(-1);
+  }
+})();

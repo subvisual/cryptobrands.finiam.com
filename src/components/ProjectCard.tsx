@@ -1,29 +1,23 @@
 import React from "react";
 import ExternalLinkLogo from "./ExternalLinkLogo";
 import Image from "./Image";
+import ProjectCardUpvote from "./ProjectCardUpvote";
 
-export default function ProjectCard({
-  link,
-  title,
-  image_path,
-  link_name,
-  studio_name,
-  studio_link,
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="bg-gray-lightest transition-transform duration-100 ease-in-out transform hover:scale-101 rounded-sm overflow-hidden">
       <div className="hover:bg-purple-lighter relative">
         <a
           className="absolute w-full h-full"
-          href={link}
+          href={project.link}
           target="_blank"
           rel="noopener"
-          aria-label={title}
+          aria-label={project.title}
         ></a>
         <div className="p-2 pb-0">
           <Image
-            className="w-full min-h-150 sm:min-h-250 md:min-h-180 lg:min-h-250"
-            src={image_path}
+            className="w-full min-h-40 sm:min-h-64 md:min-h-44 lg:min-h-44"
+            src={project.imagePath}
             alt="Project's showcase"
             layout="fill"
             loading="lazy"
@@ -33,40 +27,40 @@ export default function ProjectCard({
         <div className="px-4 pt-2 pb-4">
           <div className="flex items-center">
             <h1 className="text-base text-purple-dark mr-2 font-bold">
-              {title}
+              {project.title}
             </h1>
 
             <ExternalLinkLogo />
           </div>
           <a
             className="text-tiny text-gray-light font-sans"
-            href={link}
+            href={project.link}
             target="_blank"
             rel="noopener"
-            aria-label={title}
+            aria-label={project.title}
           >
-            {link_name}
+            {project.linkName}
           </a>
         </div>
       </div>
       <div
-        className={`border-t border-gray-lighter relative ${
-          studio_name ? "hover:bg-purple-lighter" : ""
+        className={`border border-gray-lighter relative ${
+          project.studioName ? "hover:bg-purple-lighter" : ""
         }`}
       >
         <div className="px-4 py-3 text-tiny text-gray-light flex flex-wrap items-center font-sans">
-          {studio_name ? (
+          {project.studioName ? (
             <>
               <a
                 className="absolute w-full h-full z-20"
-                href={studio_link}
+                href={project.studioLink}
                 target="_blank"
                 rel="noopener"
-                aria-label={studio_name}
+                aria-label={project.studioName}
               ></a>
               <span className="mr-1">Designed by</span>
               <span className="text-purple-dark border-b border-purple-dark inline-block mr-2">
-                {studio_name}
+                {project.studioName}
               </span>
               <ExternalLinkLogo />
             </>
@@ -86,6 +80,8 @@ export default function ProjectCard({
           )}
         </div>
       </div>
+
+      <ProjectCardUpvote project={project} />
     </div>
   );
 }

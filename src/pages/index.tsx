@@ -1,5 +1,5 @@
 import React from "react";
-import getProjects from "../../lib/getProjects";
+import getProjects from "../../backend/getProjects";
 import ProjectCard from "../components/ProjectCard";
 
 export default function HomePage({ projects }) {
@@ -9,7 +9,7 @@ export default function HomePage({ projects }) {
 
       <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-5">
         {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
 
@@ -26,10 +26,10 @@ export default function HomePage({ projects }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   return {
     props: {
-      projects: getProjects(),
+      projects: await getProjects(),
     },
   };
 }
