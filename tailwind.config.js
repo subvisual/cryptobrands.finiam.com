@@ -22,7 +22,7 @@ const colors = {
 module.exports = {
   purge: {
     mode: "all",
-    content: ["./src/**/*.{js, jsx, ts, tsx, css}"],
+    content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
   },
   theme: {
     screens: {
