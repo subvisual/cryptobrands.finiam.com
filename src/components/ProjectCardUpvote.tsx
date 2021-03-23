@@ -3,7 +3,11 @@ import useIsMounted from "../hooks/useIsMounted";
 import Heart from "./Heart";
 
 function ProjectCardContainer({ children }: { children?: ReactNode }) {
-  return <div className="px-4 py-2 text-tiny text-gray-light">{children}</div>;
+  return (
+    <div className="px-4 py-2 text-tiny text-gray-light font-sans">
+      {children}
+    </div>
+  );
 }
 
 export default function ProjectCardUpvote({ project }: { project: Project }) {
@@ -93,12 +97,7 @@ export default function ProjectCardUpvote({ project }: { project: Project }) {
         </button>
       )}
 
-      {votedThisSession && (
-        <p>
-          <span className="text-purple-dark">Thank you.</span> {project.title}{" "}
-          to the moon! 🚀
-        </p>
-      )}
+      {votedThisSession && <p>Thank you. {project.title} to the moon! 🚀</p>}
     </ProjectCardContainer>
   );
 }
