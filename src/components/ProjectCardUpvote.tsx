@@ -95,7 +95,8 @@ export default function ProjectCardUpvote({ project }: { project: Project }) {
 
       {votedThisSession && (
         <p>
-          <span className="text-purple-dark">Thank you.</span> {project.title} to the moon! 🚀
+          <span className="text-purple-dark">Thank you.</span> {project.title}{" "}
+          to the moon! 🚀
         </p>
       )}
     </ProjectCardContainer>
