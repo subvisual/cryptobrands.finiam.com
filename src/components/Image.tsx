@@ -25,10 +25,12 @@ export default function Image({ className, src, objectFit, ...props }) {
   }
 
   return (
-    <div className={`relative ${className || ""}`}>
+    <div className={`relative pointer-events-none`}>
       {!imgLoaded && (
         <div
-          className="absolute w-full h-full z-0 bg-gray-lighter"
+          className={`absolute w-full h-full z-0 bg-gray-lighter ${
+            className || ""
+          }`}
           aria-hidden="true"
         />
       )}
@@ -40,6 +42,7 @@ export default function Image({ className, src, objectFit, ...props }) {
           {...props}
           ref={imgRef}
           onLoad={handleOnLoad}
+          className={className}
           src={imageLoader(`.${src}`)}
         />
       </picture>

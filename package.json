@@ -5,15 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "bin/setup_db",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css}\""
   },
   "dependencies": {
     "@reach/dialog": "^0.13.2",
-    "critters": "^0.0.8",
+    "critters": "^0.0.9",
+    "dotenv": "^8.2.0",
     "glob": "^7.1.6",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
+    "ioredis": "^4.24.2",
     "next": "^10.0.9",
     "next-optimized-images": "^2.6.2",
     "next-plugin-preact": "^3.0.3",
@@ -26,13 +29,14 @@
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
+    "@types/ioredis": "^4.22.0",
     "@types/react": "^17.0.3",
     "autoprefixer": "^10.2.5",
     "cssnano": "^4.1.10",
     "netlify-plugin-cache": "^1.0.3",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.0.4",
     "typescript": "^4.2.3"
   }
 }
