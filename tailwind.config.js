@@ -1,15 +1,28 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const heightScale = require("tailwindcss/defaultConfig").theme.height;
+
+const colors = {
+  purple: {
+    dark: "#09001A",
+    lighter: "#EEEAF5",
+  },
+  white: "#FFFFFF",
+  green: "#5EF38B",
+  gray: {
+    light: "#737373",
+    lighter: "#E1E1E1",
+    lightest: "#FCFCFC",
+  },
+  red: "#E42C2C",
+  transparent: "transparent",
+  current: "currentColor",
+  black: "black",
+};
 
 module.exports = {
   purge: {
     mode: "all",
-    content: [
-      "./src/**/*.js",
-      "./src/**/*.jsx",
-      "./src/**/*.ts",
-      "./src/**/*.tsx",
-      "./src/**/*.css",
-    ],
+    content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
   },
   theme: {
     screens: {
@@ -28,28 +41,14 @@ module.exports = {
       base: "1rem",
       md: "1.4rem",
     },
-    minHeight: {
-      150: "150px",
-      180: "180px",
-      250: "250px",
-    },
+    minHeight: heightScale,
     maxWidth: {
       950: "950px",
       xl: "1280px",
     },
-    colors: {
-      purple: {
-        dark: "#09001A",
-        lighter: "#EEEAF5",
-      },
-      white: "#FFFFFF",
-      green: "#5EF38B",
-      gray: {
-        light: "#737373",
-        lighter: "#E1E1E1",
-        lightest: "#FCFCFC",
-      },
-    },
+    colors,
+    stroke: colors,
+    fill: colors,
     extend: {
       gap: {
         5: "1.4rem",
@@ -60,6 +59,13 @@ module.exports = {
       backgroundOpacity: {
         95: "0.95",
       },
+    },
+  },
+
+  variants: {
+    extend: {
+      stroke: ["hover", "group-hover"],
+      fill: ["hover", "group-hover"],
     },
   },
 };

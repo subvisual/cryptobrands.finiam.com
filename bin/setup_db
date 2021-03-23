@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+require("dotenv").config();
+const glob = require("glob");
+const fs = require("fs");
+const Redis = require("ioredis");
+
+const redis = new Redis(process.env.REDIS_URL);
+
+(async () => {
+  try {
+    console.log("Adding projects to the database");
+
+    let redisMulti = redis.multi();
+    glob
+      .sync(process.cwd() + "/backend/projects/**.json")
+      .forEach((filename) => {
+        const project = JSON.parse(fs.readFileSync(filename));
+
+        redisMulti.setnx(project.name, 0);
+      });
+
+    await redisMulti.exec();
+    console.log("Done!");
+
+    redis.disconnect();
+    process.exit(0);
+  } catch (error) {
+    console.error(error);
+    redis.disconnect();
+    process.exit(-1);
+  }
+})();

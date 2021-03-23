@@ -8,17 +8,18 @@ public_folder: "/images"
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "cms/projects"
+    folder: "backend/projects"
     extension: "json"
     create: true
     slug: "{{sort}}_{{title}}"
     summary: "{{sort}}_{{title}}"
     sortable_fields: ["sort"]
     fields:
+      - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Link Name", name: "link_name", widget: "string" }
-      - { label: "Studio Name", name: "studio_name", widget: "string", required: false }
-      - { label: "Studio Link", name: "studio_link", widget: "string", required: false }
-      - { label: "Image", name: "image_path", widget: "image" }
+      - { label: "Link Name", name: "linkName", widget: "string" }
+      - { label: "Studio Name", name: "studioName", widget: "string", required: false }
+      - { label: "Studio Link", name: "studioLink", widget: "string", required: false }
+      - { label: "Image", name: "imagePath", widget: "image" }
       - { label: "Number", name: "sort", widget: "number" }
