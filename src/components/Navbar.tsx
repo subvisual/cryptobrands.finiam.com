@@ -23,7 +23,7 @@ export default function Navbar() {
     <>
       <nav className="w-full fixed border-b border-white border-opacity-25 py-4 px-5 bg-purple-dark z-10">
         <div className="max-w-xl mx-auto">
-          <div className="w-full flex items-center">
+          <div className="w-full flex items-center whitespace-nowrap">
             <div className="flex items-center flex-grow">
               <a
                 className="w-4 h-auto rounded-sm mr-6"
