@@ -8,7 +8,7 @@ export default function AboutModal({ isOpen, onDismiss }) {
     <Dialog
       onDismiss={onDismiss}
       isOpen={isOpen}
-      className="fixed top-0 left-0 w-full h-full p-0 m-0 z-50 bg-purple-dark bg-opacity-95"
+      className="fixed top-0 left-0 w-full h-full p-0 m-0 z-50 bg-purple-dark bg-opacity-95 px-5"
       aria-label="About page content"
     >
       <Head>
