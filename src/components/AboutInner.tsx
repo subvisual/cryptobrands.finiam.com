@@ -3,7 +3,7 @@ import FiniamLogoExt from "../components/FiniamLogoExt";
 
 export default function AboutInner() {
   return (
-    <p className="text-white md:text-md md:leading-9 leading-7 max-w-950 text-opacity-80 md:pl-10 font-sans">
+    <p className="text-white md:text-md md:leading-9 leading-7 max-w-950 text-opacity-80 font-sans">
       CryptoBrands is a project developed by{" "}
       <a
         href="https://www.finiam.com/"
