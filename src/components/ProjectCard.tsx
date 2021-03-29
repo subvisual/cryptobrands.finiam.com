@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         ></a>
         <div className="p-2 pb-0">
           <Image
-            className="w-full min-h-40 sm:min-h-64 md:min-h-44 lg:min-h-44"
+            className="w-full min-h-32 sm:min-h-64 md:min-h-44 lg:min-h-44"
             src={project.imagePath}
             alt="Project's showcase"
             layout="fill"
