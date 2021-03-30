@@ -1,5 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import siteMetadata from "root/common/siteMetadata";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,7 +11,7 @@ class MyDocument extends Document {
   render() {
     return (
       <React.StrictMode>
-        <Html lang="en">
+        <Html lang={siteMetadata.lang}>
           <Head />
           <body>
             <Main />

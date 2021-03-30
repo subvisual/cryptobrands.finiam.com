@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react";
-import useIsMounted from "../hooks/useIsMounted";
+import useIsMounted from "../common/useIsMounted";
 import Heart from "./Heart";
 
 function ProjectCardContainer({ children }: { children?: ReactNode }) {
