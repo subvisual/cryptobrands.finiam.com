@@ -1,10 +1,14 @@
 import React from "react";
 import getProjects from "backend/getProjects";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "root/components/ProjectCard";
+import siteMetadata from "root/common/siteMetadata";
+import SEO from "root/components/SEO";
 
 export default function HomePage({ projects }) {
   return (
     <>
+      <SEO {...siteMetadata} />
+
       <div className="custom-rings" aria-label="Pretty decorative rings"></div>
 
       <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-5">

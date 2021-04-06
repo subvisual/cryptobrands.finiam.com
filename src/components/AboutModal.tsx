@@ -12,7 +12,7 @@ export default function AboutModal({ isOpen, onDismiss }) {
       aria-label="About page content"
     >
       <Head>
-        <title>CryptoBrands - About</title>
+        <title>About - CryptoBrands by Finiam</title>
       </Head>
 
       <div className="max-w-xl mx-auto py-20">
