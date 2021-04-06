@@ -12,10 +12,12 @@ export default function Navbar() {
     event.preventDefault();
     event.stopPropagation();
 
+    document.documentElement.classList.add("overflow-hidden");
     setAboutOpen(true);
   }
 
   function closeModal() {
+    document.documentElement.classList.remove("overflow-hidden");
     setAboutOpen(false);
   }
 

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navbar from "root/components/Navbar";
-import "@reach/dialog/styles.css";
 import "../styles/index.css";
 
 export default function MyApp({ Component, pageProps }) {

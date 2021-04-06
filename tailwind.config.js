@@ -20,8 +20,8 @@ const colors = {
 };
 
 module.exports = {
+  mode: "jit",
   purge: {
-    mode: "all",
     content: ["./src/**/*.{js,jsx,ts,tsx,css}"],
   },
   theme: {
