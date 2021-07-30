@@ -16,16 +16,20 @@ export default function ProjectCard({ project }: { project: Project }) {
           aria-label={project.name}
         ></a>
         <div className="p-2 pb-0">
-          <div className="relative w-full min-h-32 sm:min-h-64 md:min-h-44 lg:min-h-44">
+          <div className="relative w-full min-h-32 sm:min-h-64 md:min-h-44 lg:min-h-44 overflow-hidden">
             <Image
+              width={388}
+              height={220}
               loader={sanityLoader}
               src={project.imagePath}
               alt="Project's showcase"
-              layout="fill"
+              layout="responsive"
               loading="lazy"
               objectFit="cover"
               placeholder="blur"
               blurDataURL={project.imagePlaceholder}
+              quality="75"
+              sizes="(min-width: 1440px) 388px, 50vw"
             />
           </div>
         </div>
