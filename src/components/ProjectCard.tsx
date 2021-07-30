@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="absolute w-full h-full"
           href={project.link}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           aria-label={project.name}
         ></a>
         <div className="p-2 pb-0">
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="text-tiny text-gray-light font-sans"
             href={project.link}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             aria-label={project.name}
           >
             {project.linkText}
@@ -60,7 +60,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 className="absolute w-full h-full z-20"
                 href={project.studioUrl}
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 aria-label={project.studioName}
               ></a>
               <span className="mr-1 border-b border-transparent">
