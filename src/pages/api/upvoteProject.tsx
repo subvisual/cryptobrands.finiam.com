@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import upvoteProject from "backend/upvoteProject";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function upvoteProjectAPI(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   const { slug } = req.body;
 
   if (!slug) {
@@ -12,4 +15,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   await upvoteProject(slug);
 
   res.status(200).send("");
-};
+}

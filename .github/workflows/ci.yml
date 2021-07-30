@@ -29,3 +29,5 @@ jobs:
         run: |
           yarn
           yarn lint
+          yarn next lint
+

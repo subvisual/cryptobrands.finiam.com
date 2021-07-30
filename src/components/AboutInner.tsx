@@ -8,7 +8,7 @@ export default function AboutInner() {
       <a
         href="https://www.finiam.com/"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
         className="text-green hover:text-opacity-75"
       >
         finiam
@@ -35,7 +35,7 @@ export default function AboutInner() {
       <a
         href="https://twitter.com/intent/tweet?text=@wearefiniam%20I%20just%20found%20this%20amazing%20brand%21&hashtags=finiamcryptobrands"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
         className="text-green"
       >
         #finiamcryptobrands
@@ -69,7 +69,7 @@ export default function AboutInner() {
       <a
         href="https://github.com/finiam/cryptobrands.finiam.com/issues"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
         className="text-green"
       >
         repository
