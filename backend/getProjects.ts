@@ -1,21 +1,46 @@
+import { gql, request } from "graphql-request";
 import createRedisClient from "./createRedisClient";
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const projectsFromCMS = importAll(
-  (require as any).context("./projects", true, /\.json$/),
-);
+const QUERY = gql`
+  query {
+    allCryptobrand {
+      name
+      slug {
+        current
+      }
+      link
+      linkText
+      studioUrl
+      studioName
+      image {
+        asset {
+          metadata {
+            lqip
+          }
+          url
+        }
+      }
+    }
+  }
+`;
 
 export default async () => {
+  const projectsFromCMS = (await request(process.env.CMS_URL, QUERY))
+    .allCryptobrand;
   const redis = createRedisClient();
   const votes = await redis.mget(
-    projectsFromCMS.map((project) => project.name),
+    projectsFromCMS.map((project) => project.slug.current),
   );
   const projectsWithVotes: Project[] = await Promise.all(
     projectsFromCMS.map(async (project, index) => ({
-      ...project,
+      name: project.name,
+      slug: project.slug.current,
+      link: project.link,
+      linkText: project.linkText,
+      studioUrl: project.studioUrl,
+      studioName: project.studioName,
+      imagePath: project.image.asset.url,
+      imagePlaceholder: project.image.asset.metadata.lqip,
       votes: votes[index] || 0,
     })),
   );

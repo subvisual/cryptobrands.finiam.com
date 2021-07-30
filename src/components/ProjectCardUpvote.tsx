@@ -17,7 +17,7 @@ export default function ProjectCardUpvote({ project }: { project: Project }) {
   const [error, setError] = useState(null);
 
   const alreadyVoted = isMounted
-    ? window.localStorage.getItem(project.name) === "true"
+    ? window.localStorage.getItem(project.slug) === "true"
     : false;
 
   async function handleUpvote() {
@@ -28,14 +28,14 @@ export default function ProjectCardUpvote({ project }: { project: Project }) {
     try {
       const response = await fetch("/api/upvoteProject", {
         method: "post",
-        body: JSON.stringify({ projectName: project.name }),
+        body: JSON.stringify({ slug: project.slug }),
         headers: {
           "Content-Type": "application/json",
         },
       });
 
       if (!response.ok) setError(true);
-      else window.localStorage.setItem(project.name, "true");
+      else window.localStorage.setItem(project.slug, "true");
     } catch (e) {
       setError(e);
     } finally {
@@ -97,7 +97,7 @@ export default function ProjectCardUpvote({ project }: { project: Project }) {
         </button>
       )}
 
-      {votedThisSession && <p>Thank you. {project.title} to the moon! 🚀</p>}
+      {votedThisSession && <p>Thank you. {project.name} to the moon! 🚀</p>}
     </ProjectCardContainer>
   );
 }

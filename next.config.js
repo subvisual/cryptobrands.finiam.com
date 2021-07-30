@@ -7,6 +7,10 @@ module.exports = withPreact(
 
     experimental: { optimizeCss: true },
 
+    images: {
+      domains: ["cdn.sanity.io"],
+    },
+
     async headers() {
       return [
         {
