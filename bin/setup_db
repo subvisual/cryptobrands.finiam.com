@@ -1,23 +1,32 @@
 #!/usr/bin/env node
 require("dotenv").config();
-const glob = require("glob");
-const fs = require("fs");
+
+const { gql, request } = require("graphql-request");
 const Redis = require("ioredis");
 
 const redis = new Redis(process.env.REDIS_URL);
+
+const QUERY = gql`
+  query {
+    allCryptobrand {
+      slug {
+        current
+      }
+    }
+  }
+`;
 
 (async () => {
   try {
     console.log("Adding projects to the database");
 
     let redisMulti = redis.multi();
-    glob
-      .sync(process.cwd() + "/backend/projects/**.json")
-      .forEach((filename) => {
-        const project = JSON.parse(fs.readFileSync(filename));
+    const projectsFromCMS = (await request(process.env.CMS_URL, QUERY))
+      .allCryptobrand;
 
-        redisMulti.setnx(project.name, 0);
-      });
+    projectsFromCMS.forEach((project) => {
+      redisMulti.setnx(project.slug.current, 0);
+    });
 
     await redisMulti.exec();
     console.log("Done!");

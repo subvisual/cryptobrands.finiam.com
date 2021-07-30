@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import sanityLoader from "root/utils/sanityLoader";
 import ExternalLinkLogo from "./ExternalLinkLogo";
-import Image from "./Image";
 import ProjectCardUpvote from "./ProjectCardUpvote";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -12,22 +13,26 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={project.link}
           target="_blank"
           rel="noopener"
-          aria-label={project.title}
+          aria-label={project.name}
         ></a>
         <div className="p-2 pb-0">
-          <Image
-            className="w-full min-h-32 sm:min-h-64 md:min-h-44 lg:min-h-44"
-            src={project.imagePath}
-            alt="Project's showcase"
-            layout="fill"
-            loading="lazy"
-            objectFit="cover"
-          />
+          <div className="relative w-full min-h-32 sm:min-h-64 md:min-h-44 lg:min-h-44">
+            <Image
+              loader={sanityLoader}
+              src={project.imagePath}
+              alt="Project's showcase"
+              layout="fill"
+              loading="lazy"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL={project.imagePlaceholder}
+            />
+          </div>
         </div>
         <div className="px-4 pt-2 pb-4">
           <div className="flex items-center">
             <h1 className="text-base text-purple-dark mr-2 font-bold">
-              {project.title}
+              {project.name}
             </h1>
 
             <ExternalLinkLogo />
@@ -37,9 +42,9 @@ export default function ProjectCard({ project }: { project: Project }) {
             href={project.link}
             target="_blank"
             rel="noopener"
-            aria-label={project.title}
+            aria-label={project.name}
           >
-            {project.linkName}
+            {project.linkText}
           </a>
         </div>
       </div>
@@ -53,7 +58,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <>
               <a
                 className="absolute w-full h-full z-20"
-                href={project.studioLink}
+                href={project.studioUrl}
                 target="_blank"
                 rel="noopener"
                 aria-label={project.studioName}

@@ -1,17 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const imageLoader = (require as any).context(
-  `../../public?webp`,
-  true,
-  /\.(png|jpeg|jpg)$/,
-);
-
-const webpLoader = (require as any).context(
-  `../../public?webp`,
-  true,
-  /\.(png|jpeg|jpg)$/,
-);
-
 export default function Image({ className, src, objectFit, ...props }) {
   const imgRef = useRef({} as any);
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -36,14 +24,12 @@ export default function Image({ className, src, objectFit, ...props }) {
       )}
 
       <picture>
-        <source srcSet={webpLoader(`.${src}`)} type="image/webp" />
-        <source srcSet={imageLoader(`.${src}`)} type="image/jpeg" />
         <img
           {...props}
           ref={imgRef}
           onLoad={handleOnLoad}
           className={className}
-          src={imageLoader(`.${src}`)}
+          src={src}
         />
       </picture>
     </div>

@@ -2,14 +2,14 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import upvoteProject from "backend/upvoteProject";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { projectName } = req.body;
+  const { slug } = req.body;
 
-  if (!projectName) {
+  if (!slug) {
     res.status(400).send("");
     return;
   }
 
-  await upvoteProject(projectName);
+  await upvoteProject(slug);
 
   res.status(200).send("");
 };
