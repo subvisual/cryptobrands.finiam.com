@@ -4,7 +4,13 @@ import sanityLoader from "root/utils/sanityLoader";
 import ExternalLinkLogo from "./ExternalLinkLogo";
 import ProjectCardUpvote from "./ProjectCardUpvote";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+  preloadImage,
+}: {
+  project: Project;
+  preloadImage: boolean;
+}) {
   return (
     <div className="bg-gray-lightest transition-transform duration-100 ease-in-out transform hover:scale-101 rounded-sm overflow-hidden">
       <div className="hover:bg-purple-lighter relative">
@@ -24,12 +30,13 @@ export default function ProjectCard({ project }: { project: Project }) {
               src={project.imagePath}
               alt="Project's showcase"
               layout="responsive"
-              loading="lazy"
+              loading={preloadImage ? "eager" : "lazy"}
               objectFit="cover"
               placeholder="blur"
               blurDataURL={project.imagePlaceholder}
               quality="75"
               sizes="(min-width: 1440px) 388px, 50vw"
+              priority={preloadImage}
             />
           </div>
         </div>
