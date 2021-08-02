@@ -14,6 +14,28 @@ export default function MyApp({ Component, pageProps }) {
 
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
+
+        <link
+          rel="preload"
+          href="/fonts/subset-StudioFeixenSansRg_Finiam.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/subset-StudioFeixenSansMd_Finiam.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/subset-StudioFeixenSans-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
       </Head>
 
       <div className="min-h-screen bg-purple-dark">

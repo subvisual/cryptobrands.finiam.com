@@ -3,8 +3,9 @@ import getProjects from "backend/getProjects";
 import ProjectCard from "root/components/ProjectCard";
 import siteMetadata from "root/common/siteMetadata";
 import SEO from "root/components/SEO";
+import Head from "next/head";
 
-export default function HomePage({ projects }) {
+export default function HomePage({ projects }: { projects: Project[] }) {
   return (
     <>
       <SEO {...siteMetadata} />
@@ -12,8 +13,12 @@ export default function HomePage({ projects }) {
       <div className="custom-rings" aria-label="Pretty decorative rings"></div>
 
       <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-5">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.name}
+            project={project}
+            preloadImage={index < 4}
+          />
         ))}
       </div>
 
