@@ -2,9 +2,6 @@
   command = "yarn build"
   publish = "out"
 
-[functions]
-  node_bundler = "esbuild"
-
 [[plugins]]
   package = "netlify-plugin-cache"
   [plugins.inputs]
