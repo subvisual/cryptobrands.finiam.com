@@ -1,8 +1,11 @@
 [build]
-  command = "yarn build"
-  publish = "out"
+command = "yarn build"
+publish = ".next"
 
 [[plugins]]
-  package = "netlify-plugin-cache"
-  [plugins.inputs]
-    paths = [".next"]
+package = "netlify-plugin-cache"
+[plugins.inputs]
+paths = [".next"]
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
