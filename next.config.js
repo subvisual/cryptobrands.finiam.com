@@ -1,8 +1,6 @@
 const withPreact = require("next-plugin-preact");
 
 module.exports = withPreact({
-  target: "experimental-serverless-trace",
-
   experimental: { optimizeCss: true },
 
   images: {
