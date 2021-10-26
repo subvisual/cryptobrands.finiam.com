@@ -1,6 +1,4 @@
-const withPreact = require("next-plugin-preact");
-
-module.exports = withPreact({
+module.exports = {
   experimental: { optimizeCss: true },
 
   images: {
@@ -20,4 +18,17 @@ module.exports = withPreact({
       },
     ];
   },
-});
+
+  webpack: (config, { dev, isServer }) => {
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+      });
+    }
+
+    return config;
+  },
+};
