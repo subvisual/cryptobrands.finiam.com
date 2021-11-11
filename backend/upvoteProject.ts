@@ -1,21 +1,26 @@
+import request, { gql } from "graphql-request";
 import createRedisClient from "./createRedisClient";
 
-// This is Lua, and it only increments a key if it exist
-// to avoid DDOS and filling our redis instance with
-// a bunch of random keys.
-const REDIS_SCRIPT = `
-  local exists = redis.call('exists', KEYS[1])
-  if exists == 1 then
-      return redis.call('incr', KEYS[1])
-  end
-
-  return
+const QUERY = gql`
+  query ($slug: String!) {
+    allCryptobrand(where: { slug: { current: { eq: $slug } } }) {
+      _id
+    }
+  }
 `;
 
-export default async (projectName: string) => {
+export default async function upvoteProject(
+  projectName: string,
+): Promise<void> {
+  const project = (
+    await request(process.env.CMS_URL, QUERY, { slug: projectName })
+  ).allCryptobrand?.[0];
+
+  if (!project) throw new Error("project does not exist");
+
   const redis = createRedisClient();
 
-  await redis.eval(REDIS_SCRIPT, 1, projectName);
+  await redis.incr(projectName);
 
   redis.disconnect();
-};
+}

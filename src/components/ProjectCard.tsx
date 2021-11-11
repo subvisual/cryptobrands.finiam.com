@@ -26,7 +26,6 @@ export default function ProjectCard({
             <Image
               width={388}
               height={220}
-              loader={sanityLoader}
               src={project.imagePath}
               alt="Project's showcase"
               layout="responsive"
