@@ -12,7 +12,13 @@ export default async function upvoteProjectAPI(
     return;
   }
 
-  await upvoteProject(slug);
+  try {
+    await upvoteProject(slug);
 
-  res.status(200).send("");
+    res.status(200).send("");
+  } catch (error) {
+    console.error(error);
+
+    res.status(404).send("");
+  }
 }

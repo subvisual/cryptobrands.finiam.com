@@ -3,7 +3,6 @@ import getProjects from "backend/getProjects";
 import ProjectCard from "root/components/ProjectCard";
 import siteMetadata from "root/common/siteMetadata";
 import SEO from "root/components/SEO";
-import Head from "next/head";
 
 export default function HomePage({ projects }: { projects: Project[] }) {
   return (
@@ -35,7 +34,7 @@ export default function HomePage({ projects }: { projects: Project[] }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   return {
     props: {
       projects: await getProjects(),

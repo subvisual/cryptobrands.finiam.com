@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import SEO from "root/components/SEO";
 import siteMetadata from "root/common/siteMetadata";
 import AboutInner from "root/components/AboutInner";
